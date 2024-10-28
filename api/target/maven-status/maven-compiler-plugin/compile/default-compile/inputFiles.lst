@@ -1,7 +1,0 @@
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/api/MFPatientSearchService.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/api/impl/MFPatientSearchServiceImpl.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/api/dao/MFPatientSearchDao.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/MFPatientSearchActivator.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/PatientSearchService.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/MFPatientSearchConfig.java
-/home/openmrs/PatientSearch/patientsearch/api/src/main/java/org/openmrs/module/patientsearch/Item.java

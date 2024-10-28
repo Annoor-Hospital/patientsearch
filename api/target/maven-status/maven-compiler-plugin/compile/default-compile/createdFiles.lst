@@ -1,7 +1,0 @@
-org/openmrs/module/patientsearch/MFPatientSearchConfig.class
-org/openmrs/module/patientsearch/api/dao/MFPatientSearchDao.class
-org/openmrs/module/patientsearch/PatientSearchService.class
-org/openmrs/module/patientsearch/api/MFPatientSearchService.class
-org/openmrs/module/patientsearch/MFPatientSearchActivator.class
-org/openmrs/module/patientsearch/api/impl/MFPatientSearchServiceImpl.class
-org/openmrs/module/patientsearch/Item.class
