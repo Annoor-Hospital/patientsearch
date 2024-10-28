@@ -17,18 +17,18 @@
 	<!-- <updateURL>https://modules.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL> -->
 	<!-- /Base Module Properties -->
 	
-	<require_version>1.11.6</require_version>
+	<require_version>2.1.0</require_version>
 	
 	<!-- Extensions -->
-	<extension>
+	<!-- <extension>
 		<point>org.openmrs.admin.list</point>
 		<class>org.openmrs.module.patientsearch.extension.html.AdminList</class>
-	</extension>
+	</extension> -->
     
 
-	<aware_of_modules>
+	<!-- <aware_of_modules>
 		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
-	</aware_of_modules>
+	</aware_of_modules> -->
 	
 	
 	<!-- AOP

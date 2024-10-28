@@ -24,35 +24,4 @@
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
     <context:component-scan base-package="org.openmrs.module.patientsearch" />
-
-    <!-- Wraps MFPatientSearchService methods in DB transactions and OpenMRS interceptors,
-    which set audit info like dateCreated, changedBy, etc.-->
-    <bean id="patientsearch.MFPatientSearchService"
-            class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
-        <property name="transactionManager">
-            <ref bean="transactionManager" />
-        </property>
-        <property name="target">
-            <bean class="org.openmrs.module.patientsearch.api.impl.MFPatientSearchServiceImpl">
-                <property name="dao" ref="patientsearch.MFPatientSearchDao" />
-            </bean>
-        </property>
-        <property name="preInterceptors">
-            <ref bean="serviceInterceptors" />
-        </property>
-        <property name="transactionAttributeSource">
-            <ref bean="transactionAttributeSource" />
-        </property>
-    </bean>
-
-    <!-- Adds MFPatientSearchService to OpenMRS context so it can be accessed
-    calling Context.getService(MFPatientSearchService.class) -->
-    <bean parent="serviceContext">
-        <property name="moduleService">
-            <list>
-                <value>org.openmrs.module.patientsearch.api.MFPatientSearchService</value>
-                <ref bean="patientsearch.MFPatientSearchService" />
-            </list>
-        </property>
-    </bean>
 </beans>

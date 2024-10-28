@@ -11,14 +11,15 @@ package org.openmrs.module.patientsearch.api;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.openmrs.User;
 import org.openmrs.api.UserService;
-import org.openmrs.module.patientsearch.Item;
-import org.openmrs.module.patientsearch.api.dao.MFPatientSearchDao;
-import org.openmrs.module.patientsearch.api.impl.MFPatientSearchServiceImpl;
+// import org.openmrs.module.patientsearch.Item;
+// import org.openmrs.module.patientsearch.api.dao.MFPatientSearchDao;
+// import org.openmrs.module.patientsearch.api.impl.MFPatientSearchServiceImpl;
 import static org.mockito.Mockito.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
@@ -29,14 +30,14 @@ import static org.junit.Assert.*;
  */
 public class MFPatientSearchServiceTest {
 	
-	@InjectMocks
-	MFPatientSearchServiceImpl basicModuleService;
+	// @InjectMocks
+	// MFPatientSearchServiceImpl basicModuleService;
 	
-	@Mock
-	MFPatientSearchDao dao;
+	// @Mock
+	// MFPatientSearchDao dao;
 	
-	@Mock
-	UserService userService;
+	// @Mock
+	// UserService userService;
 	
 	@Before
 	public void setupMocks() {
@@ -44,20 +45,21 @@ public class MFPatientSearchServiceTest {
 	}
 	
 	@Test
+	@Ignore("This should be replaced by a test of query-constructing functionality, maybe?")
 	public void saveItem_shouldSetOwnerIfNotSet() {
-		//Given
-		Item item = new Item();
-		item.setDescription("some description");
+		// //Given
+		// Item item = new Item();
+		// item.setDescription("some description");
 		
-		when(dao.saveItem(item)).thenReturn(item);
+		// when(dao.saveItem(item)).thenReturn(item);
 		
-		User user = new User();
-		when(userService.getUser(1)).thenReturn(user);
+		// User user = new User();
+		// when(userService.getUser(1)).thenReturn(user);
 		
-		//When
-		basicModuleService.saveItem(item);
+		// //When
+		// basicModuleService.saveItem(item);
 		
-		//Then
-		assertThat(item, hasProperty("owner", is(user)));
+		// //Then
+		// assertThat(item, hasProperty("owner", is(user)));
 	}
 }
